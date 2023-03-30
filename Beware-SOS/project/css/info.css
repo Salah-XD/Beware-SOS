@@ -1,0 +1,28 @@
+* {
+  box-sizing: border-box;
+  margin: 3px;
+}
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: aliceblue;
+}
+.newss {
+  margin: 3px;
+}
+
+.head h1 {
+  margin-top: 2rem;
+  padding: 0;
+  /* display: flex;
+  justify-content: center; */
+  /* padding: 10px 65px; */
+  /* border-bottom: 2px solid black; */
+}
+.sub {
+  color: rgb(121, 121, 121);
+  /* margin-top: -10px; */
+  /* margin-bottom: -px; */
+}
+.pa {
+  line-height: 1.5;
+}
