@@ -7,8 +7,134 @@
     <link rel="stylesheet" href="css/tc.css"><script src="https://kit.fontawesome.com/95346ea11f.js" crossorigin="anonymous"></script>
 </head>
 <body>
-    <div class="contact">
-        
+    <div class="navbar">
+        <div class="dropdown">
+            <button class="dropbtn">
+                <i class="fa-sharp fa-solid fa-bars"></i>
+            </button>
+            <div class="dropdown-content">
+                <a href="home.html">HOME</a>
+                <a href="pre-sos.html">PRE-SOS</a>
+                <a href="tc.html">CONTACT</a>
+            </div>
+        </div>
     </div>
+    <div class="contact">
+        <div class="main">
+            <i class="fa-solid fa-address-book"></i><a>Emergency contact</a><button class="but" id="show-login">Add</button>
+        </div>
+        <br>
+        <div class="out">
+            <h1>Your Contacts</h1>
+            <br>
+            <table class="tab">
+                <tr>
+                    <th>
+                        Name
+                    </th>
+                    <th>
+                        Contacts
+                    </th>
+                </tr>
+                <tr>
+                    <td id="n1"></td>
+                    <td id="p1"></td>
+                </tr>
+                <tr>
+                    <td id="n2"></td>
+                    <td id="p2"></td>
+                </tr>
+                <tr>
+                    <td id="n3"></td>
+                    <td id="p3"></td>
+                </tr>
+            </table>
+        </div>
+        <div class="popup">
+            <div class="close-btn">&times;</div>
+            <div class="form">
+                <h1>Add to Contacts</h1>
+                <div class="form-element">
+                    <label for="Name">Name</label>
+                    <input type="text" id="nn" placeholder="Name" required>
+                </div>
+                <div class="form-element">
+                    <label for="Phone number">Phone number:</label>
+                    <input type="tel" id="pp" placeholder="+91 6374628655" required>
+                </div>
+                <div class="form-element">
+                    <a type="submit" id="btn1" value="Click Me" onclick="input()">Submit</a>
+                </div>
+            </div>
+        </div>
+    <div class="foot">
+        <center>
+            <ul>
+                <li class="min"><a onclick=" pg(0)" href="pre-sos.html"><i class="fa-solid fa-triangle-exclamation" style="color: black;"></i></a></li>
+                <li class="min"><a onclick=" pg(1)"><i class="fa-solid fa-location-dot" style="color: black;"></i></a></li>
+                <li class="min"><a onclick=" pg(2)" href="home.html"><i class="fa-solid fa-house" style="color: black"></i></a></li>
+                <li class="min"><a onclick=" pg(4)" href="news.html"><i class="fa-solid fa-circle-info" style="color: black;"></i></a></li>
+                <li class="min"><a onclick=" pg(3)" href="user.html"><i class="fa-solid fa-gear" style="color: black;"></i></a></li>
+            </ul>
+        </center>
+    </div>
+    <script>
+        function  takevalue(){
+            var name = document.getElementById("name").value;
+            document.write("Name : " + name);
+        }
+        var n1 = " ";
+        var n2 = " ";
+        var n3 = " ";
+        var p1 = " ";
+        var p2 = " ";
+        var p3 = " ";
+        function change(){
+            var nn1 = document.getElementById('n1');
+            var nn2 = document.getElementById('n2');
+            var nn3 = document.getElementById('n3');
+            var pp2 = document.getElementById('p1');
+            var pp2 = document.getElementById('p2');
+            var pp3 = document.getElementById('p3');
+
+            nn1.innerHTML = n1;
+            nn2.innerHTML = n2;
+            nn3.innerHTML = n3;
+            pp1.innerHTML = p1;
+            pp2.innerHTML = p2;
+            pp3.innerHTML = p3;
+            document.querySelector(".popup").classList.remove("active");
+        }
+        function input(){
+            var a = document.getElementById('nn').value;
+            var b = document.getElementById('pp').value;
+            if(n1 == ""){
+                n1 = a;
+                p1 = b;
+                change();
+                console.log(a,b);
+            }
+            else{
+                if(n2 != ""){
+                    n1 = a;
+                    p1 = b;
+                    change();
+                }
+                else{
+                    n1 = a;
+                    p1 = b;
+                    change();
+                }
+            }
+        }
+    </script>
+    <script>
+        document.querySelector("#show-login").addEventListener("click",function(){
+            document.querySelector(".popup").classList.add("active")
+        });
+        document.querySelector(".popup .close-btn").addEventListener("click",function(){
+            document.querySelector(".popup").classList.remove("active")
+        });
+    </script>
 </body>
 </html>
