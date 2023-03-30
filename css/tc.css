@@ -1,0 +1,281 @@
+*{
+    box-sizing: border-box; 
+    margin: 0;
+}
+body{
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+.navbar{
+    display: block;
+    background: black;
+    margin: 0;
+    padding: 0;
+    width: 98vw;
+    height: 90px;
+}
+.navbar a {
+    float: left;
+    font-size: 30px;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+/* The dropdown container */
+.dropdown {
+    float: left;
+    overflow: hidden;
+}/* Dropdown button */
+.dropdown .dropbtn {
+    font-size: 16px;
+    border: none;
+    outline: none;
+    color: white;
+    padding: 14px 16px;
+    background-color: inherit;
+    font-family: inherit; /* Important for vertical align on mobile phones */
+    margin: 0; /* Important for vertical align on mobile phones */
+}
+  /* Add a red background color to navbar links on hover */
+.navbar a:hover, .dropdown:hover .dropbtn {
+    background-color: red;
+}
+/* Dropdown content (hidden by default) */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 200px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    transition: all .5s ease-in-out;
+}
+/* Links inside the dropdown */
+.dropdown-content a {
+    float: none;
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+}
+
+  /* Add a grey background color to dropdown links on hover */
+.dropdown-content a:hover {
+    background-color: #ddd;
+}
+
+  /* Show the dropdown menu on hover */
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+.fa-bars{
+    font-size: 35px;
+    margin-top: 10px;
+    margin-left: 1vh;
+}
+/*contact head start*/
+.contact{
+    width: 90vw;
+    height: 80vh;
+    margin-left: 40px;
+    margin-top: 3vh;
+    background-color: #f1f1f1;
+}
+.main{
+    width: 85vw;
+    height: 7vh;
+    margin-left: 21px;
+    margin-top: 10px;
+    align-content: baseline;
+    background-color: white;
+    display: inline-block;
+    border-bottom: 5px solid black;
+}
+.main a{
+    font-size: 45px;
+    font-weight: 900;
+    margin-top: 4px;
+}
+.fa-address-book{
+    margin-top: 65px;
+    margin-left: 20px;
+    font-size: 50px;
+    font-weight: 700;
+}
+.fa-circle-plus{
+    font-size: 50px;
+    margin-top: 0;
+    margin-left: 0;
+}
+/*contact head end*/
+/*contact content start*/
+.fa-triangle-exclamation{
+    font-size: 45px;
+}
+.fa-location-dot{
+    font-size: 45px;
+}
+.fa-house{
+    font-size: 45px;
+}
+.fa-circle-info{
+    font-size: 45px;
+}
+.fa-gear{
+    font-size: 45px;
+}
+tr{
+    width: 85vw;
+    height: 4vh;
+    margin-right: 10vh;
+}
+th{
+    width: 35vw;
+    height: 5vh;
+    font-size: 45px;
+    color: white;
+}
+.foot{
+    display: block;
+    position: fixed;
+    z-index: 3;
+    margin-left: -50px;
+    width: 100vw;
+    height: 7vh;
+    bottom: 0;
+    background-color: lightgrey;
+}
+.foot ul{
+    margin-top: 2vh;
+    display: flex;
+    width: 100vw;
+    /* margin-left: auto;
+    margin-right:auto;  */
+    display: block;
+    align-content: center;
+    justify-content: space-between;
+}
+.foot ul li{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    display: inline-flex;
+    margin-top: 0;
+    margin-left: 5px;
+    width: 17vw;
+    height: 1.5vh;
+    padding: 4vw;
+    justify-content: space-around;
+    border-radius: 2vw;
+    background-color: rgba(255,255,255,0.4);
+}
+.but{
+    margin-left: 8vh;
+    width: 150px;
+    margin-top: 0;
+    height: 60px;
+    font-size: 45px;
+    font-weight: 600;
+    border-radius: 15px;
+    background-color: blue;
+    color: #ddd;
+    cursor: pointer;
+}
+.popup{
+    position: absolute;
+    top: -150%;
+    left: 50%;
+    transform: translate(-50%,-50%) scale(1.25);
+    width: 600px;
+    height: 25vh;
+    opacity: 0;
+    padding: 20px 30px;
+    background: #fff;
+    box-shadow: 2px 2px 5px 5px rgba(0, 0, 0, .15);
+    border-radius: 10px;
+    transition: top 0ms ease-in-out 200ms,
+                opacity 200ms ease-in-out 0ms,
+                transform 200ms ease-in-out 0ms;
+}
+h1{
+    font-size: 42px;
+    margin-left: 2vh;
+    margin-top: 20px;
+}
+.tab{
+    width: 85vw;
+    height: 22vh;
+    margin-left: 1vh;
+}
+tr{
+    width: 85vw;
+    height: 1.5vh;
+    font-size: 20px;
+}
+th{
+    font-size: 35px;
+    font-weight: 600;
+    width: 85vw;
+    height: 40px;
+    background-color: lightgreen;
+    color: white;
+}
+.popup.active{
+    top: 50%;
+    opacity: 1;
+    transform: translate(-50%,-50%) scale(1);
+    transition: top 0ms ease-in-out 200ms,
+                opacity 200ms ease-in-out 0ms,
+                transform 200ms ease-in-out 0ms;;
+}
+.popup .close-btn{
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    width: 50px;
+    height: 40px;
+    background: #888;
+    color: black;
+    text-align: center;
+    line-height: 15px;
+    border-radius: 15px;
+    cursor: pointer;
+}
+.popup .form h1{
+    text-align: center;
+    color: #222;
+    margin: 10px 8px 20px;
+    font-size: 45px;
+}
+.popup .form .form-element{
+    margin: 15px 0;
+}
+.popup .form .form-element label{
+    font-size: 40px;
+    font-weight: 600;
+}
+.popup .form .form-element input[type="text"],
+.popup .form .form-element input[type="tel"]
+{
+    margin-top: 5px;
+    display: block;
+    width: 100%;
+    height: 60px;
+    padding: 10px;
+    font-size: 33px;
+    outline: none;
+    border: 1px solid #aaa;
+    border-radius: 5px;
+}
+.popup .form .form-element button{
+    width: 500px;
+    height: 90px;
+    border: none;
+    outline: none;
+    font-size: 50px;
+    background: #222;
+    color: #f5f5f5;
+    border-radius: 10px;
+    cursor: pointer;
+}
