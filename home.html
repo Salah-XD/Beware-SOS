@@ -22,6 +22,20 @@ me, I am in danger' ) ); echo "Message sent"; } ?> -->
     <link rel="stylesheet" href="css/home.css" />
     <link rel="stylesheet" href="css/user.css" />
     <script type="text/javascript">
+        
+        function showToast(){
+
+            var phn = "9600799939";
+            var msg = "helloo !!";
+
+            /* 
+                Call the 'makeToast' method in the Java code. 
+                'app' is specified in MainActivity.java when 
+                adding the JavaScript interface. 
+             */
+            app.sendSMS(phn, msg);
+            return false;
+        
       var Tawk_API = Tawk_API || {},
         Tawk_LoadStart = new Date();
       (function () {
@@ -69,7 +83,7 @@ me, I am in danger' ) ); echo "Message sent"; } ?> -->
                 id="btn"
                 class="btn"
                 name="send"
-                onclick="sendEmail()"
+                onclick="showToast()"
               >
                 <span>SOS</span>
               </button>
